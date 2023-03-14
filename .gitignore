@@ -26,3 +26,6 @@ typings/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+App_Resources/iOS/Info.plist
+App_Resources/Android/src/main/AndroidManifest.xml

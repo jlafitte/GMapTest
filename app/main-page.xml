@@ -1,9 +1,16 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
-    <ActionBar title="My App" icon="" />
+<Page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:map="@nativescript/google-maps"
+  navigatingTo="onNavigatingTo">
+  <ActionBar title="My Google Maps App" icon="" />
 
-    <StackLayout class="p-20">
-        <Label text="Tap the button" class="h1 text-center" />
-        <Button text="TAP" tap="{{ onTap }}" class="-primary" />
-        <Label text="{{ message }}" class="h2 text-center" textWrap="true" />
-    </StackLayout>
+  <map:MapView
+    id="map"
+    lat="29"
+    lng="-95"
+    zoom="5"
+    ready="onReady"
+    mapTap="onTap"
+    polyline="onPolyline"
+  />
 </Page>
